@@ -11,8 +11,9 @@ import pages.InvoicePage;
 import utils.DriverFactory;
 import utils.WaitTime;
 
+import static utils.DateHandler.getAdultBirthday;
+import static utils.DateHandler.getValidExpirationDate;
 import static utils.ClientDetailsGenerator.*;
-import static utils.DateHandler.*;
 
 public class CheckoutSteps {
 
@@ -20,7 +21,7 @@ public class CheckoutSteps {
     CheckoutPage checkoutPage = new CheckoutPage();
     InvoicePage invoicePage = new InvoicePage();
 
-    JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
+    JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
     public static String bookingNumberInvoice;
 
     @Given("User fills required personal information")

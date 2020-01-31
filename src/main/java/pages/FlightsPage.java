@@ -27,8 +27,9 @@ public class FlightsPage extends BasePage {
     @FindBy(id = "FlightsDateEnd")
     public WebElement flightDateReturn;
 
-    @FindBy(css = "#flights > div > div > form > div > div.row.gap-10.mb-15.align-items-end.row-reverse > div.col-xs-12.col-md-1 > button")
+    @FindBy(css = "#flights > div > div > form > div > div.row.no-gutters.mb-15.align-items-end.row-reverse > div.col-xs-12.col-md-1 > button")
     public WebElement searchButton;
+
 
     @FindBy(name = "fadults")
     public WebElement adultsNumber;

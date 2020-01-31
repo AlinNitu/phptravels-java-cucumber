@@ -33,9 +33,13 @@ public class AdminBookingsPage extends BasePage {
     @FindBy(xpath = "//tbody/tr[1]/td[12]")
     public WebElement infants;
 
+    //div[@class='panel-heading']
+    @FindBy(xpath = "//div[@class='panel-heading']")
+    public WebElement panelHeading;
+
 
     @Override
     public void waitForPage() {
-        waitUntilVisible(bookingsTable, WaitTime.MEDIUM.getWaitTime());
+        waitUntilVisible(panelHeading, WaitTime.MEDIUM.getWaitTime());
     }
 }

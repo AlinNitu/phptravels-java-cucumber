@@ -25,13 +25,19 @@ public class AdminFlightsBookingsSteps {
     }
 
     @Then("Booking id in admin page is the same as booking number in invoice page")
-    public void bookingIdInAdminPageIsTheSameAsBookingNumberInInvoicePage() {
+    public void bookingIdInAdminPageIsTheSameAsBookingNumberInInvoicePage() throws InterruptedException {
 
         adminBookingsPage.waitForPage();
 
+//        System.out.println(CheckoutSteps.bookingNumberInvoice);
+//        System.out.println(adminBookingsPage.firstRowBookingId.getText());
+
+        Thread.sleep(2000); //for some reason the test fails without this, it doesn't wait for the element in waitpage()
+
         Assert.assertEquals(CheckoutSteps.bookingNumberInvoice,
-                adminBookingsPage.firstRowBookingId.getText().replaceAll("[^\\d]", ""),
+                adminBookingsPage.firstRowBookingId.getText(),
                 "The booking number in admin table is not the same as the booking id from the invoice");
+
     }
 
     @Then("In Admin panel departure flight is {string} and arriving flight is {string}")
