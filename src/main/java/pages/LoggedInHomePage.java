@@ -12,6 +12,9 @@ public class LoggedInHomePage extends BasePage {
     @FindBy(xpath = "//a[@href='https://www.phptravels.net/m-flights   ']")
     public WebElement flightsButtonTopMenu;
 
+    @FindBy(xpath = "//a[@title='home']")
+    public WebElement homeTopMenu;
+
 
     @Override
     public void waitForPage() {

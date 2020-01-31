@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pages.FlightsPage;
 import pages.FlightsSelectionPage;
+import pages.HomePage;
 import pages.LoggedInHomePage;
 import utils.DriverFactory;
 import utils.WaitTime;
@@ -22,12 +23,20 @@ public class FlightSteps {
     LoggedInHomePage loggedInHomePage = new LoggedInHomePage();
     FlightsPage flightsPage = new FlightsPage();
     FlightsSelectionPage flightsSelectionPage = new FlightsSelectionPage();
+    HomePage homePage = new HomePage();
 
 
-    @Given("User clicks on the flights button on top menu")
-    public void navigateToFlightsPage() {
+    @Given("User clicks on the home button on top menu")
+    public void navigateToHomePage() {
 
-        loggedInHomePage.waitAndClick(loggedInHomePage.flightsButtonTopMenu, WaitTime.MEDIUM.getWaitTime());
+        loggedInHomePage.waitAndClick(loggedInHomePage.homeTopMenu, WaitTime.MEDIUM.getWaitTime());
+        //flightsPage.waitForPage();
+    }
+
+    @Given("User clicks on the flights button")
+    public void navigateToFlightsSearch() {
+
+        loggedInHomePage.waitAndClick(homePage.flightsSearchButton, WaitTime.MEDIUM.getWaitTime());
         flightsPage.waitForPage();
     }
 

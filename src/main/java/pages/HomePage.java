@@ -15,6 +15,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = ".//a[@class='dropdown-item active tr']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//a[@data-name='flights']")
+    public WebElement flightsSearchButton;
+
 
     @Override
     public void waitForPage() {
@@ -26,5 +29,9 @@ public class HomePage extends BasePage {
 
         driver.navigate().to(getConfigProp("url"));
         waitForPage();
+    }
+
+    public WebElement getFlightsSearchButton() {
+        return flightsSearchButton;
     }
 }

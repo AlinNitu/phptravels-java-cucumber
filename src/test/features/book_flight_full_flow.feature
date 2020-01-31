@@ -11,7 +11,8 @@ Feature: Book flight for the full next week and assert it was correctly saved in
 
   @flight
   Scenario: Search for return flights for the full next week for one adult and verify it was saved correctly in Admin panel
-    Given   User clicks on the flights button on top menu
+    Given   User clicks on the home button on top menu
+    And     User clicks on the flights button
     And     User selects return flight option
     And     User selects a flight departing from "SXF" and arriving at "JFK"
     And     Set departure date as next Monday
