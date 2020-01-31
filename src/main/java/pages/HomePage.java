@@ -10,13 +10,13 @@ public class HomePage extends BasePage {
 
 
     @FindBy(xpath = ".//div[@class='dropdown dropdown-login dropdown-tab']//a[@id='dropdownCurrency']")
-    public WebElement myAccountDropdown;
+    protected WebElement myAccountDropdown;
 
     @FindBy(xpath = ".//a[@class='dropdown-item active tr']")
-    public WebElement loginButton;
+    protected WebElement loginButton;
 
     @FindBy(xpath = "//a[@data-name='flights']")
-    public WebElement flightsSearchButton;
+    protected WebElement flightsSearchButton;
 
 
     @Override
@@ -31,7 +31,19 @@ public class HomePage extends BasePage {
         waitForPage();
     }
 
-    public WebElement getFlightsSearchButton() {
-        return flightsSearchButton;
+    public void clickOnMyAccountDropDown() {
+
+        waitAndClick(myAccountDropdown, WaitTime.EXTRA_SMALL.getWaitTime());
     }
+
+    public void clickOnLoginButton() {
+
+        waitAndClick(loginButton, WaitTime.EXTRA_SMALL.getWaitTime());
+    }
+
+    public void clickOnFlightsButton() {
+
+        waitAndClick(flightsSearchButton, WaitTime.MEDIUM.getWaitTime());
+    }
+
 }
