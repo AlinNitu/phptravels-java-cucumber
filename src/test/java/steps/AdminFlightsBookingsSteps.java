@@ -18,7 +18,7 @@ public class AdminFlightsBookingsSteps {
 
 
     @Given("User navigates to flights bookings")
-    public void userNavigatesToFlightsBookings() throws InterruptedException {
+    public void userNavigatesToFlightsBookings() {
 
         adminLoggedInHomePage.travelhopeFlighsDropDown.click();
         adminLoggedInHomePage.waitAndClick(adminLoggedInHomePage.travelhopeFlighsBookings, WaitTime.EXTRA_SMALL.getWaitTime());

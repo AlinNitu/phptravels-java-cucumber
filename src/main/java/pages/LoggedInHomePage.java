@@ -32,5 +32,4 @@ public class LoggedInHomePage extends BasePage {
 
         waitAndClick(homeTopMenu, WaitTime.MEDIUM.getWaitTime());
     }
-
 }

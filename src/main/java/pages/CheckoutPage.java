@@ -1,8 +1,15 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import utils.WaitTime;
+
+import static utils.ClientDetailsGenerator.*;
+import static utils.ClientDetailsGenerator.getClientNationality;
+import static utils.DateHandler.getAdultBirthday;
+import static utils.DateHandler.getValidExpirationDate;
 
 public class CheckoutPage extends BasePage {
 
@@ -62,4 +69,44 @@ public class CheckoutPage extends BasePage {
 
         waitUntilVisible(name, WaitTime.EXTRA_LARGE.getWaitTime());
     }
+
+    public void fillUserPersonalInformation() {
+
+        clearAndSendKeys(name, getClientName());
+        clearAndSendKeys(surname, getClientSurname());
+        clearAndSendKeys(email, getClientEmail());
+        clearAndSendKeys(phone, getClientPhone());
+        clearAndSendKeys(passportNumber, getClientPassportNumber());
+        clearAndSendKeys(birthday, getAdultBirthday());
+        clearAndSendKeys(expirationDate, getValidExpirationDate());
+        nationalityDropdown.click();
+        clearAndSendKeys(nationality, getClientNationality());
+        nationality.sendKeys(Keys.TAB);
+    }
+
+    public void fillUserCreditCardInformation() {
+
+        Select cardTypeSelect = new Select(cardTypeDropdown);
+        Select expirationMonthSelect = new Select(expirationMonthDropDown);
+        Select expirationYearSelect = new Select(expirationYearDropDown);
+
+        clearAndSendKeys(cardNumber, getCardNumber());
+        clearAndSendKeys(cardCvv, getCardCvv());
+        cardTypeSelect.selectByVisibleText("Visa");
+        expirationMonthSelect.selectByVisibleText("Dec (12)");
+        expirationYearSelect.selectByVisibleText("2023");
+    }
+
+    public void acceptTermsAndConditions() {
+
+        jsExecutor.executeScript("arguments[0].click();", acceptTerms);
+        jsExecutor.executeScript("arguments[0].scrollIntoView(true);", completeBookingButton);
+        jsExecutor.executeScript("window.scrollBy(0,-200)");
+    }
+
+    public void submitCheckoutForm() {
+
+        waitAndClick(completeBookingButton, WaitTime.MEDIUM.getWaitTime());
+    }
+
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import utils.WaitTime;
 
 public class AdminLoggedInHomePage extends BasePage {
@@ -20,5 +21,10 @@ public class AdminLoggedInHomePage extends BasePage {
     public void waitForPage() {
 
         waitUntilVisible(sidebarMenu, WaitTime.EXTRA_LARGE.getWaitTime());
+    }
+
+    public void adminIsSuccessfullyLoggedIn() {
+
+        Assert.assertTrue(sidebarMenu.isDisplayed(), "Successfully logged in the Admin home page");
     }
 }
