@@ -16,7 +16,7 @@ Feature: Book flight for the full next week and assert it was correctly saved in
     And     User selects return flight option
     And     User selects a flight departing from "SXF" and arriving at "JFK"
     And     Set departure date as next Monday
-    And     Set departure date as next Sunday
+    And     Set arriving date as next Sunday
     And     The booking is for 1 adults and 0 children and 0 infants
     When    Click the Search flights button to navigate to flights selection
 

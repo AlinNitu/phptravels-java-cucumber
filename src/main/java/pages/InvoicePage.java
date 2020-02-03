@@ -18,4 +18,9 @@ public class InvoicePage extends BasePage {
 
         waitUntilVisible(downloadInvoiceButton, WaitTime.EXTRA_LARGE.getWaitTime());
     }
+
+    public String getBookingNumberInvoicePage() {
+
+         return bookingNumber.getText().replaceAll("[^\\d]", "");
+    }
 }

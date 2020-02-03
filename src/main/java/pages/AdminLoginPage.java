@@ -29,4 +29,19 @@ public class AdminLoginPage extends BasePage {
         driver.navigate().to(getConfigProp("adminUrl"));
         waitForPage();
     }
+
+    public void enterValidAdminUsername() {
+
+        adminEmail.sendKeys(getConfigProp("adminUsername"));
+    }
+
+    public void enterValidAdminPassword() {
+
+        adminPassword.sendKeys(getConfigProp("adminPassword"));
+    }
+
+    public void clickAdminLoginButton() {
+
+        waitAndClick(adminLoginButton, WaitTime.EXTRA_SMALL.getWaitTime());
+    }
 }
