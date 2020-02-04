@@ -15,53 +15,53 @@ public class CheckoutPage extends BasePage {
 
     // PERSONAL INFORMATION
     @FindBy(xpath = "//input[@id='name']")
-    public WebElement name;
+    protected WebElement name;
 
     @FindBy(xpath = "//input[@id='surname']")
-    public WebElement surname;
+    protected WebElement surname;
 
     @FindBy(xpath = "//input[@id='email']")
-    public WebElement email;
+    protected WebElement email;
 
     @FindBy(xpath = "//input[@id='phone']")
-    public WebElement phone;
+    protected WebElement phone;
 
     @FindBy(xpath = "//input[@id='birthday']")
-    public WebElement birthday;
+    protected WebElement birthday;
 
     @FindBy(xpath = "//input[@id='cardno']")
-    public WebElement passportNumber;
+    protected WebElement passportNumber;
 
     @FindBy(xpath = "//input[@id='expiration']")
-    public WebElement expirationDate;
+    protected WebElement expirationDate;
 
     @FindBy(xpath = "//div[@id='s2id_nationality']")
-    public WebElement nationalityDropdown;
+    protected WebElement nationalityDropdown;
 
     @FindBy(xpath = "//div[@class='select2-search']/input[@type='text']")
-    public WebElement nationality;
+    protected WebElement nationality;
 
     // CREDIT CARD INFORMATION
     @FindBy(xpath = "//input[@id='card-number']")
-    public WebElement cardNumber;
+    protected WebElement cardNumber;
 
     @FindBy(xpath = "//input[@id='cvv']")
-    public WebElement cardCvv;
+    protected WebElement cardCvv;
 
     @FindBy(xpath = "//select[@id='cardtype']")
-    public WebElement cardTypeDropdown;
+    protected WebElement cardTypeDropdown;
 
     @FindBy(xpath = "//select[@id='expiry-month']")
-    public WebElement expirationMonthDropDown;
+    protected WebElement expirationMonthDropDown;
 
     @FindBy(xpath = "//select[@id='expiry-year']")
-    public WebElement expirationYearDropDown;
+    protected WebElement expirationYearDropDown;
 
     @FindBy(xpath = "//input[@id='acceptTerm']")
-    public WebElement acceptTerms;
+    protected WebElement acceptTerms;
 
     @FindBy(xpath = "//button[@id='confirmBooking']")
-    public WebElement completeBookingButton;
+    protected WebElement completeBookingButton;
 
 
     @Override

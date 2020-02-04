@@ -11,10 +11,10 @@ public class LoggedInHomePage extends BasePage {
     protected WebElement leftMenu;
 
     @FindBy(xpath = "//a[@href='https://www.phptravels.net/m-flights   ']")
-    public WebElement flightsButtonTopMenu;
+    protected WebElement flightsButtonTopMenu;
 
     @FindBy(xpath = "//a[@title='home']")
-    public WebElement homeTopMenu;
+    protected WebElement homeTopMenu;
 
 
     @Override
