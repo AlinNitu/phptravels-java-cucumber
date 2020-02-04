@@ -56,14 +56,14 @@ public class AdminFlightsBookingsSteps {
     }
 
     @Then("In Admin panel the departure date is next Monday")
-    public void inAdminPanelTheDepartureDateIsNextMonday() throws Exception {
+    public void inAdminPanelTheDepartureDateIsNextMonday() {
 
         Assert.assertEquals(adminBookingsPage.getDepartureDate(), getNextMonday(),
                 "Not the same departure date");
     }
 
     @And("In admin panel the arriving date is next Sunday")
-    public void inAdminPanelTheArrivingDateIsNextSunday() throws Exception {
+    public void inAdminPanelTheArrivingDateIsNextSunday() {
 
         Assert.assertEquals(adminBookingsPage.getArrivalDate(), getNextSunday(),
                 "Not the same arrival date");
