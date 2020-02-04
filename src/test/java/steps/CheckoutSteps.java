@@ -35,7 +35,5 @@ public class CheckoutSteps {
         invoicePage.waitForPage();
 
         bookingNumberInvoice = invoicePage.getBookingNumberInvoicePage();
-
-        //bookingNumberInvoice = invoicePage.bookingNumber.getText().replaceAll("[^\\d]", "");
     }
 }

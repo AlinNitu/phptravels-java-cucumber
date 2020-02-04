@@ -8,13 +8,13 @@ import utils.WaitTime;
 public class AdminLoggedInHomePage extends BasePage {
 
     @FindBy(xpath = "//ul[@id='social-sidebar-menu']")
-    public WebElement sidebarMenu;
+    protected WebElement sidebarMenu;
 
     @FindBy(xpath = "//a[@href='#TravelhopeFlights']")
-    public WebElement travelhopeFlighsDropDown;
+    protected WebElement travelhopeFlighsDropDown;
 
     @FindBy(xpath = "//a[@href='https://www.phptravels.net/admin/thflight/bookings']")
-    public WebElement travelhopeFlighsBookings;
+    protected WebElement travelhopeFlighsBookings;
 
 
     @Override
@@ -26,5 +26,11 @@ public class AdminLoggedInHomePage extends BasePage {
     public void adminIsSuccessfullyLoggedIn() {
 
         Assert.assertTrue(sidebarMenu.isDisplayed(), "Successfully logged in the Admin home page");
+    }
+
+    public void navigateToTravelFlightsBookings() {
+
+        travelhopeFlighsDropDown.click();
+        waitAndClick(travelhopeFlighsBookings, WaitTime.EXTRA_SMALL.getWaitTime());
     }
 }

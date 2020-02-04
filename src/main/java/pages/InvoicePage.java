@@ -7,10 +7,10 @@ import utils.WaitTime;
 public class InvoicePage extends BasePage {
 
     @FindBy(xpath = "//button[@onclick='saveAndSendInvoice(0)']")
-    public WebElement downloadInvoiceButton;
+    protected WebElement downloadInvoiceButton;
 
     @FindBy(xpath = "/html/body/div[2]/div[1]/center/div[2]/table[1]/tbody/tr/td/div[1]/table/tbody/tr/td/div[2]")
-    public WebElement bookingNumber;
+    protected WebElement bookingNumber;
 
 
     @Override

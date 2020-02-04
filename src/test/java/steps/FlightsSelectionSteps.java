@@ -10,7 +10,6 @@ public class FlightsSelectionSteps {
     @Given("User selects flight with minimum amount of stops")
     public void filterByMinAmountOfStops() throws InterruptedException {
 
-        //flightsSelectionPage.waitForPage();
         flightsSelectionPage.filterByMinimumStops();
     }
 }

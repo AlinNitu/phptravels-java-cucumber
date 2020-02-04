@@ -72,7 +72,7 @@ public class FlightsPage extends BasePage {
         waitAndClick(resultLabel, WaitTime.LARGE.getWaitTime());
     }
 
-    public void setDepartingDateAsNextMonday() throws Exception {
+    public void setDepartingDateAsNextMonday() {
 
         jsExecutor.executeScript
                 ("document.getElementById('FlightsDateStart').removeAttribute('readonly', 0)");
@@ -82,7 +82,7 @@ public class FlightsPage extends BasePage {
 
     }
 
-    public void setArrivingDateAsNextSunday() throws Exception {
+    public void setArrivingDateAsNextSunday() {
 
         jsExecutor.executeScript
                 ("document.getElementById('FlightsDateEnd').removeAttribute('readonly', 0)");

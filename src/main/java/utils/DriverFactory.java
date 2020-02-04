@@ -29,6 +29,7 @@ public class DriverFactory {
                     }
                 }
 
+                //e2e flow not tested on firefox
                 case BrowserType.FIREFOX: {
 
                     if (null == driver) {

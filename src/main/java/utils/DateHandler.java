@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 public class DateHandler {
 
-    public static String getNextMonday() throws Exception {
+    public static String getNextMonday() {
 
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
@@ -27,11 +27,11 @@ public class DateHandler {
             case Calendar.SATURDAY:
                 return LocalDate.now().plusDays(2).toString();
             default:
-                throw new Exception("Day not recognized!");
+                throw new RuntimeException("Day not recognized!");
         }
     }
 
-    public static String getNextSunday() throws Exception {
+    public static String getNextSunday() {
 
         LocalDate nextSunday = LocalDate.parse(getNextMonday()).plusDays(6);
         return nextSunday.toString();

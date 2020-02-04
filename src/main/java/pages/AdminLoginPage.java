@@ -9,13 +9,13 @@ import static utils.ReadConfigFile.getConfigProp;
 public class AdminLoginPage extends BasePage {
 
     @FindBy(xpath = "//label/input[@name='email']")
-    public WebElement adminEmail;
+    protected WebElement adminEmail;
 
     @FindBy(xpath = "//label/input[@name='password']")
-    public WebElement adminPassword;
+    protected WebElement adminPassword;
 
     @FindBy(xpath = "//button[@class='btn btn-primary btn-block ladda-button fadeIn animated btn-lg']")
-    public WebElement adminLoginButton;
+    protected WebElement adminLoginButton;
 
 
     @Override
