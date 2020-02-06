@@ -27,3 +27,6 @@ c. Via command line using mvn clean test -Dtest=runner.RunnerClassName
 Example for running the full flow for booking a flight and asserting it was saved correctly in the Admin bookings:
 
 ```mvn clean test -Dtest=runner.FlightRunner```
+
+
+Note: the project uses WebdriverManager and there is no need to manually add the driver to the project.
