@@ -27,7 +27,7 @@ public class DateHandler {
             case Calendar.SATURDAY:
                 return LocalDate.now().plusDays(2).toString();
             default:
-                throw new RuntimeException("Day not recognized!");
+                return "Invalid day";
         }
     }
 
